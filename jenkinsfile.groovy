@@ -4,7 +4,7 @@ pipeline {
         stage('add folder'){
             steps{
                 sh 'mkdir testvm-folder'
-                sh  'ls-ltrh '
+                sh  'ls -ltrh '
                 sh 'echo "you r working"'
 }
 }
