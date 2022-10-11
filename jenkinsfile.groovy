@@ -4,13 +4,11 @@ pipeline {
      stages {
          stage('Add Folder')  {
             steps {
-                jobDs1 scriptText: """folder('myFolder'){
-          description('my description')
-          displayName('My Display Name')
-      }"""
+            sh 'mkdir  shivani-folder'
+            sh 'ls -ltrh'
+            sh ' echo "I am working"'
             }
          }
      }
 }        
 
- 
