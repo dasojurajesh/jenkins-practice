@@ -1,14 +1,12 @@
 pipeline {
     agent any
-
-     stages {
-         stage('Add Folder')  {
-            steps {
-            sh 'mkdir  shivani-folder'
-            sh 'ls -ltrh'
-            sh ' echo "I am working"'
-            }
-         }
-     }
-}        
-
+    stages {
+        stage('add folder'){
+            steps{
+                sh 'mkdir testvm-folder'
+                sh  'ls-ltrh '
+                sh 'echo "you r working"'
+}
+}
+}
+}
