@@ -8,21 +8,21 @@ pipeline {
         }
         stage ('creating folder') {
             steps {
-                sh 'mkdir test'
-                sh 'mkdir stage1'
-                sh 'mkdir stage2'
+                sh 'mkdir test22'
+                sh 'mkdir stageoo1'
+                sh 'mkdir stage872'
                 sh 'ls -ltrh'
             }
         }
         stage ('rename folder') {
             steps {
-                sh 'mv test shivani'
+                sh 'mv test22 shivani'
             }
         }
         stage ('validate') {
             steps {
                 sh 'ls -ltrh'
-                echo "folder test renaming shivani "
+                echo "folder test22 renaming shivani "
             }
         }
     }
