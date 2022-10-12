@@ -14,15 +14,15 @@ pipeline {
                 sh 'ls -ltrh'
             }
         }
-        stage ('delete folder') {
+        stage ('rename folder') {
             steps {
-                sh 'rm -r test'
+                sh 'mv test shivani'
             }
         }
         stage ('validate') {
             steps {
                 sh 'ls -ltrh'
-                echo "folder test is deleted "
+                echo "folder test renaming shivani "
             }
         }
     }
