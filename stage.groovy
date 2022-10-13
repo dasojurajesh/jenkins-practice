@@ -11,18 +11,19 @@ pipeline {
                 sh 'mkdir test'
                 sh 'mkdir stage1'
                 sh 'mkdir stage2'
+                sh 'mkdir stage3'
                 sh 'ls -ltrh'
             }
         }
-        stage ('rename folder') {
+        stage ('delete folder') {
             steps {
-                sh 'mv test shivani'
+                sh 'rm-r stage3'
             }
         }
         stage ('validate') {
             steps {
                 sh 'ls -ltrh'
-                echo "folder test renaming shivani "
+                echo "delete folder stage3 "
             }
         }
     }
