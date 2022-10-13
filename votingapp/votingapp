@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stage('printing working directory') {
+        steps{
+            sh 'pwd'
+
+        }
+    }
+    stage ('install package') {
+        steps{
+            sh 'apt install apache2 -y'
+            sh 'ls -ltrh'
+        }
+    }
+    stage ('validate') {
+        steps{
+            sh 'ls -ltrh'
+            echo "install appache2"
+        }
+        }
+    }
+
+}
