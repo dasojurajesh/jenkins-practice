@@ -17,7 +17,7 @@ pipeline {
         }
         stage ('creating files') {
             steps {
-                sh 'ls ltrh'
+                sh 'touch f1,f2,f3'
                 echo "files copy to the folder"
                 
             }
