@@ -8,7 +8,7 @@ pipeline {
             }
 
         }
-        stages ('creating folder') {
+        stage ('creating folder') {
             steps {
                 sh 'mkdir shivani'
                 sh 'ls -ltrh'
