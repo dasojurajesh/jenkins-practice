@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh 'ls ltrh'
                 echo "files copy to the folder"
-                sh 'ls -ltrh'
+                
             }
         }
     }
