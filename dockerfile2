@@ -15,6 +15,11 @@ pipeline {
                 }
             }
         }
+        stage ('install package'){
+          steps {
+            sh "apt install ngnix -y"
+          }
+          }
         stage ('build dockerfile'){
             steps {
                 sh "docker build -t image14 ."
