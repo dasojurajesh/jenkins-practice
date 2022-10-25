@@ -1,41 +1,4 @@
-pipeline {
-    agent any
-    stages {
-        stage('printing working directory'){
-            steps {
-                sh 'pwd'
-
-            }
-        }
-        stage ('clone repo'){
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username'), usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username')]) {
-                  echo "repo cloned"
-                  sh "ls-ltrh"
-                }
-            }
-        }
-        stage ('install package'){
-          steps {
-            sh "apt install ngnix -y"
-          }
-          }
-        stage ('build dockerfile'){
-            steps {
-                sh "docker build -t image14 ."
-            }
-        }
-        stage ('docker image'){
-            steps {
-                sh "dockerimages"
-            }
-        }
-        stage ('run the image'){
-            steps {
-                sh "docker run -d -p 8080:8089 image14"
-            }
-        }
-
-
-    }
-}
+# syntax=docker/dockerfile:2
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get install -y curl nginx
