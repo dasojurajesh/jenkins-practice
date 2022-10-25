@@ -16,7 +16,7 @@ pipeline {
     }
     stage ('build dockerfile'){
         steps {
-            sh "docker build -t image1 ."
+            sh "docker build -t image2 ."
         }
     }
     stage ('docker images'){
@@ -26,7 +26,7 @@ pipeline {
 }
     stage ('docker run the image'){
     steps {
-        sh "docker run -d -p 8080:8086 25076b976eff "
+        sh "docker run -d -p 8080:8086 image2 "
     }
 }
     }
