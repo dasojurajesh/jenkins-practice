@@ -1,14 +1,17 @@
 pipeline {
     agent any
-    stage ('printing working directory') {
-        steps {
-            sh 'pwd'
+    stages{
+        stage('printing working directory'){
+            steps{
+                sh 'pwd'
+            }
         }
-    }
+    
+    
     stage ('clone repo'){
         steps {
             withCredentials([usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username')]) {
-            echo "repocloned"
+            echo "repo cloned"
             sh 'ls -ltrh'
        }
     }
