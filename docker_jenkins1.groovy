@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username'), usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username')]) {
                   echo "repo cloned"
-                  sh "ls-ltrh"
+                  sh "ls -lstrh"
                 }
             }
         }
