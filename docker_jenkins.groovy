@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages ('printing working directory') {
-        steps{
+        steps {
             sh 'pwd'
         }
     }
     stage ('clone repo'){
-        steps{
+        steps {
             withCredentials([usernamePassword(credentialsId: 'shivani_git', passwordVariable: 'password', usernameVariable: 'username')]) {
             echo "repocloned"
             sh 'ls -ltrh'
        }
     }
     stage ('build dockerfile'){
-        steps{
+        steps {
             sh "docker build -t image1 ."
 
         }
