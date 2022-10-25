@@ -19,6 +19,16 @@ pipeline {
             sh "docker build -t image1 ."
         }
     }
+    stage ('docker images'){
+    steps {
+        sh "docker images"
+    }
+}
+    stage ('docker run the image'){
+    steps {
+        sh "docker run -d -p 8080:8086 25076b976eff "
+    }
+}
     }
 }
 
