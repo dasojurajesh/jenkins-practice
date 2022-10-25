@@ -13,14 +13,13 @@ pipeline {
             sh 'ls -ltrh'
     }
     }
+    }
     stage ('build dockerfile'){
         steps {
             sh "docker build -t image1 ."
         }
     }
-     
     }
 }
-     
 
     
