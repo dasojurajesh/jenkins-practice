@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages ('printing working directory') {
+    stage ('printing working directory') {
         steps {
             sh 'pwd'
         }
