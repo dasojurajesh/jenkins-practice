@@ -20,11 +20,4 @@ pipeline {
                 sh "docker build -t image15 ."
             }
         }
-        stage ('docker run'){
-            steps {
-                sh "docker run -d -p 8080:8082 image15"
-            }
-        }
-
     }
-}
