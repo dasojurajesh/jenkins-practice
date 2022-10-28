@@ -17,7 +17,7 @@ pipeline {
         }
         stage ('build dockerfile'){
             steps {
-                sh "docker build -t image14 ."
+                sh "docker build -t image15 ."
             }
         }
         stage ('docker run'){
