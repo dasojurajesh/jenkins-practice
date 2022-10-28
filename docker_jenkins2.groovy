@@ -22,7 +22,7 @@ pipeline {
         }
         stage ('docker run'){
             steps {
-                sh "docker run -d -p 8081:8080 image14"
+                sh "docker run -d -p 8081:8080 3f60c2261a20 "
             }
         }
 
