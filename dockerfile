@@ -1,6 +1,8 @@
 #getting base image ubuntu
 FROM ubuntu:latest
 RUN apt-get update
-CMD ["echo","Helloworld...!from my first docker image]
-
+CMD ["echo","Helloworld...!from my first docker image"]#getting base image ubuntu]
+~
+~
+~
 
