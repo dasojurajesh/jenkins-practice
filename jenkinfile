@@ -1,0 +1,14 @@
+pipeline {
+  agent any 
+   stages {
+     stage ('build') {
+      steps {
+        git 'https://github.com/dasojurajesh/jenkins-practice.git'
+	 sh './mvnw clean compile'
+	 // bat '.\mvnw clean compile'
+	 }
+     }
+   }
+} 
+	
+	
